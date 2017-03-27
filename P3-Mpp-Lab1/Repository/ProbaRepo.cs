@@ -13,9 +13,9 @@ namespace P3_Mpp_Lab1.Repository
     {
         SQLiteConnection conn;
 
-        public ProbaRepo(SQLiteConnection connection)
+        public ProbaRepo()
         {
-            conn = new SQLiteConnection(connection);
+            conn = DBUtils.DBUtils.getConnection();
         }
         public void update(Proba item)
         {

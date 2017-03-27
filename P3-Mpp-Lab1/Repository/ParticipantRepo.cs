@@ -13,13 +13,10 @@ namespace P3_Mpp_Lab1.Repository
     {
         SQLiteConnection conn;
 
-        public ParticipantRepo(SQLiteConnection connection)
+        public ParticipantRepo( )
         {
-            conn =new SQLiteConnection( connection);
+            conn = DBUtils.DBUtils.getConnection();
         }
-
-
-
 
        public int get_id_by_details(Participant x)
         {

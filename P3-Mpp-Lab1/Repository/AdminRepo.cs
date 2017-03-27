@@ -13,9 +13,9 @@ namespace P3_Mpp_Lab1.Repository
     {
         SQLiteConnection conn;
 
-       public AdminRepo (SQLiteConnection connection)
+       public AdminRepo ()
         {
-            conn =  connection;
+            conn = DBUtils.DBUtils.getConnection();
         }
 
 

@@ -15,9 +15,10 @@ namespace P3_Mpp_Lab1.Repository
 
         SQLiteConnection conn;
 
-        public ProgramareRepo(SQLiteConnection connection)
+        public ProgramareRepo()
         {
-            conn = new SQLiteConnection(connection);
+            conn = DBUtils.DBUtils.getConnection();
+
         }
         public void add(programare item)
         {

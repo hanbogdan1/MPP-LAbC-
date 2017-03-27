@@ -11,28 +11,24 @@ namespace P3_Mpp_Lab1.Cntrl
 {
     public class Controller
     {
-        private SQLiteConnection connection;
         private ProbaRepo probaRepository;
         private ProgramareRepo programareRepository;
         private ParticipantRepo participantRepository;
         private AdminRepo adminRepository;
-        public Controller(SQLiteConnection connectionn)
+
+        public Controller()
         {
-            connection = connectionn;
-            probaRepository = new ProbaRepo(connection);
-            programareRepository = new ProgramareRepo(connection);
-            participantRepository = new ParticipantRepo(connection);
-            adminRepository = new AdminRepo(connection);
+            probaRepository = new ProbaRepo();
+            programareRepository = new ProgramareRepo();
+            participantRepository = new ParticipantRepo();
+            adminRepository = new AdminRepo();
         }
         public void add_proba(Proba x) {
             if (probaRepository.exist_data(x))
                 probaRepository.add(x);
              
         }
-       public  SQLiteConnection get_connection()
-        {
-            return connection;
-        }
+      
 
 
         public void add_admin(Admin x)

@@ -16,9 +16,9 @@ namespace P3_Mpp_Lab1
     public partial class Form1 : Form
     {
         Controller contrl;
-        public Form1(Controller x)
+        public Form1()
         {
-            contrl = x;
+            contrl = new Controller();
             InitializeComponent();
         }
 
@@ -35,7 +35,7 @@ namespace P3_Mpp_Lab1
 
                 if (contrl.verify_login(x))
                 {
-                    Form newform = new Admin_window(contrl);
+                    Form newform = new Admin_window();
                     newform.FormClosed += new FormClosedEventHandler(newform_formclosed);
                     this.Hide();
                     newform.Show();
@@ -56,7 +56,7 @@ namespace P3_Mpp_Lab1
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            Admin_window newform = new Admin_window(contrl);
+            Admin_window newform = new Admin_window();
             newform.FormClosed += new FormClosedEventHandler(newform_formclosed);
             this.Hide();
             newform.Show();

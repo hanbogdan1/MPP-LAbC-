@@ -75,6 +75,7 @@
       <DependentUpon>Admin_window.cs</DependentUpon>
     </Compile>
     <Compile Include="Cntrl\Controller.cs" />
+    <Compile Include="DBUtils\DBUtils.cs" />
     <Compile Include="Domain\Admin.cs" />
     <Compile Include="Domain\hasId.cs" />
     <Compile Include="Domain\Participant.cs" />

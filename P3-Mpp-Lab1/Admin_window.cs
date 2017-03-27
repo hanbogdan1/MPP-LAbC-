@@ -17,9 +17,9 @@ namespace P3_Mpp_Lab1
     {
         private Controller contrl;
 
-        public Admin_window(Controller contrl)
+        public Admin_window()
         {
-            this.contrl = contrl;
+            this.contrl = new Controller();
             InitializeComponent();
             load_data();
             combo_box_spinner_initialize();
@@ -53,7 +53,7 @@ namespace P3_Mpp_Lab1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            SQLiteConnection con = contrl.get_connection();
+            SQLiteConnection con = DBUtils.DBUtils.getConnection();
             try
             {
                 if (comboBoxDistanta.SelectedIndex > -1 && comboBoxStil.SelectedIndex > -1)
@@ -127,7 +127,7 @@ namespace P3_Mpp_Lab1
                             load_data();
                             if (comboBoxDistanta.SelectedIndex > -1 && comboBoxStil.SelectedIndex > -1 )
                             {
-                                SQLiteConnection con = contrl.get_connection();
+                                SQLiteConnection con = DBUtils.DBUtils.getConnection();
                                 con.Open();
                                 using (SQLiteCommand cmd = new SQLiteCommand(con))
                                 {

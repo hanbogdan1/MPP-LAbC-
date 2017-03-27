@@ -27,10 +27,8 @@ namespace P3_Mpp_Lab1
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            var con = Get_DB_connection("Data Source=Lab1Mpp.db;Version=3;FailIfMissing=True");
-
-            Controller x = new Controller(con);
-            Application.Run(new Form1(x));
+            
+            Application.Run(new Form1());
 
 
 
